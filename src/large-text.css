@@ -1,0 +1,48 @@
+/* ---- Large-text version ---- */
+:root { --muted: #3c4642; --line: #b9c3bf; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --muted: #c9d3cf; --line: #4a5752; } }
+:root[data-theme="dark"] { --muted: #c9d3cf; --line: #4a5752; }
+html { font-size: 20px; }
+body { font-size: 20px; line-height: 1.6; }
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.45rem; }
+.subtitle { font-size: 1.15rem; }
+.note, .lim, .compound, .unit, .sub, .cite, .src, .legend, .photos figcaption, .disclaimer, .kgnote, .rlist li, .store ul, section.cautions ul, .before ul, .sublist { font-size: 1rem !important; }
+.ltable, .ltable .sub { font-size: 1rem; }
+.ltable thead th, .ltable tr.grp th, .lbl, .field label, .rlist .topic, .cautions h3, .limits h4 { font-size: 0.9rem !important; letter-spacing: 0.04em; }
+.chip, .tag { font-size: 0.85rem !important; padding: 3px 10px; }
+.cite, a.src { font-weight: 600; }
+/* Navigation: two rows of large buttons instead of a scrolling strip */
+.topnav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; overflow: visible; }
+.topnav a { justify-content: center; font-size: 1rem; height: 48px; padding: 0 4px; border: 1px solid var(--line); border-radius: 10px; color: var(--fg); }
+.topnav a.on { border-color: var(--accent); }
+section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 130px); }
+.topnav li { display: block; min-width: 0; }
+.topnav a { display: flex; width: 100%; box-sizing: border-box; }
+h1, h2, h3 { line-height: 1.25; }
+/* Bigger controls */
+.stepbtn { min-width: 52px; min-height: 52px; font-size: 1.5rem; }
+.stepper input[type=number] { width: 5.5rem; font-size: 1.15rem; }
+input[type=number], select, button.reset { font-size: 1.1rem; min-height: 52px; }
+.tabnext { font-size: 1.05rem; padding: 14px 20px; }
+.fold > summary { font-size: 1.25rem; padding: 6px 0; }
+.totop { width: 56px; height: 56px; font-size: 1.6rem; }
+/* Serving list: wider amount column */
+.sgroup li { grid-template-columns: 7rem minmax(0, 1fr); font-size: 1.05rem; }
+.steplist { font-size: 1.05rem; gap: 14px; }
+/* Tables stack into cards on phones so nothing gets squeezed */
+@media (max-width: 620px) {
+  .ltable thead { display: none; }
+  .ltable, .ltable tbody, .ltable tr, .ltable td { display: block; width: auto !important; }
+  .ltable tr { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .ltable td { border: 0; padding: 2px 0; }
+  .ltable td:first-child { font-weight: 700; font-size: 1.05rem; }
+  .lt3 tr { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+  .lt3 td:first-child { grid-column: 1 / -1; }
+  .lt3 td:nth-child(2)::before { content: "Suggested"; }
+  .lt3 td:nth-child(3)::before { content: "Maximum"; }
+  .ltable:not(.lt3) td:nth-child(2)::before { content: "Suggested"; }
+  .ltable td:nth-child(n+2)::before { display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .rlist li { grid-template-columns: auto minmax(0, 1fr); }
+  .rlist .finding { grid-column: 1 / -1; }
+}
