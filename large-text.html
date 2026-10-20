@@ -169,6 +169,7 @@ a.src, .rlist a.src { display: inline-block; padding: 8px 6px; margin: -8px -6px
 .ph-side { width: 100%; }
 .ph-cap { font-size: 0.9rem; color: var(--fg); }
 @media (min-width: 760px) { .ph-row { grid-template-columns: 180px minmax(0, 1fr); } }
+.topnotice { font-size: 0.95rem; max-width: 62ch; margin: 12px 0 0; padding: 10px 14px; background: var(--near-bg); border-left: 4px solid var(--near); border-radius: 6px; color: var(--fg); }
 .disclaimer { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
 
 @media (max-width: 620px) {
@@ -253,6 +254,7 @@ input[type=number], select, button.reset { font-size: 1.1rem; min-height: 52px; 
     <h1>Botanical Protocol</h1>
     <p class="subtitle">A daily herbal drink within safety limits: ingredients studied for antimicrobial, anti-inflammatory, and metabolic benefits</p>
     <p class="lede">An herbal routine: a warm spiced drink once a day, capsules after it, and charcoal at bedtime. Enter your weight below to get your amounts.</p>
+    <p class="topnotice"><strong>For education only. Not medical advice.</strong> Talk to your doctor before starting, especially if you take medicine or have a health condition. You use this information at your own risk.</p>
   </header>
   <nav class="topnav" aria-label="Sections"><ul role="tablist"><li><a href="#start" data-tab="start" role="tab">Start</a></li><li><a href="#doses" data-tab="doses" role="tab">Amounts</a></li><li><a href="#buy" data-tab="buy" role="tab">Shop</a></li><li><a href="#instructions" data-tab="instructions" role="tab">Make</a></li><li><a href="#cautions" data-tab="cautions" role="tab">Cautions</a></li><li><a href="#more" data-tab="more" role="tab">More</a></li></ul></nav>
   <div class="panel" data-panel="start">
@@ -305,7 +307,7 @@ input[type=number], select, button.reset { font-size: 1.1rem; min-height: 52px; 
   <div class="panel" data-panel="buy">
   <section class="steps" id="buy">
     <h2>Shopping list</h2>
-    <p class="lede">Choose organic for everything.</p>
+    <p class="lede">Choose organic for everything. Not connected to or paid by any brand or store named here.</p>
     <div class="buygrid">
       <div class="store">
         <div class="lbl">Sprouts (organic Sprouts brand)</div>
@@ -897,7 +899,7 @@ input[type=number], select, button.reset { font-size: 1.1rem; min-height: 52px; 
 
   </div>
   </div>
-  <p class="disclaimer">These are estimates from published safety values, not medical advice. Each limit was set for one substance taken alone; none accounts for many being taken together. A pharmacist can review a full list for free.</p>
+  <p class="disclaimer">These are estimates from published safety values, not medical advice. Each limit was set for one substance taken alone; none accounts for many being taken together. A pharmacist can review a full list for free. This information is provided as-is and may contain errors; the author is not responsible for how it is used.</p>
 </div>
 
 <script>
