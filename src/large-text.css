@@ -30,6 +30,11 @@ input[type=number], select, button.reset { font-size: 1.1rem; min-height: 52px; 
 /* Serving list: wider amount column */
 .sgroup li { grid-template-columns: 7rem minmax(0, 1fr); font-size: 1.05rem; }
 .steplist { font-size: 1.05rem; gap: 14px; }
+/* Daily routine */
+.dayplan li { font-size: 1.05rem; grid-template-columns: 9.5rem minmax(0, 1fr); }
+.dayplan .when { font-size: 0.9rem !important; letter-spacing: 0.04em; }
+.steps h3.stephead { font-size: 1.3rem; }
+@media (max-width: 620px) { .dayplan li { grid-template-columns: 1fr; } }
 /* Tables stack into cards on phones so nothing gets squeezed */
 @media (max-width: 620px) {
   .ltable thead { display: none; }

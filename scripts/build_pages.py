@@ -6,7 +6,7 @@ base=open(os.path.join(ROOT,'src','protocol.html')).read()
 def common(s):
     s=s.replace('<section class="before" aria-label="Before you start">','<section class="before" id="start" aria-label="Before you start">',1)
     return s
-NAV_ITEMS=[('start','Start'),('doses','Amounts'),('buy','Shop'),('instructions','Make'),('cautions','Cautions'),('more','More')]
+NAV_ITEMS=[('start','Start'),('doses','Amounts'),('buy','Shop'),('instructions','Routine'),('cautions','Cautions'),('more','More')]
 CSS_COMMON='''
 .topnav { min-width: 0; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); padding: 6px 0; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
@@ -87,7 +87,7 @@ b=add_css(b,CSS_COMMON+'.js-tabs .panel:not(.show) { display: none; }\n.panel { 
 jsB='''
 (function () {
   const order = ['start','doses','buy','instructions','cautions','more'];
-  const names = { start: 'Start', doses: 'Amounts', buy: 'Shop', instructions: 'Make', cautions: 'Cautions', more: 'More' };
+  const names = { start: 'Start', doses: 'Amounts', buy: 'Shop', instructions: 'Routine', cautions: 'Cautions', more: 'More' };
   const panels = {}; document.querySelectorAll('.panel').forEach((p) => panels[p.dataset.panel] = p);
   const tabs = [...document.querySelectorAll('.topnav a')];
   document.documentElement.classList.add('js-tabs');
