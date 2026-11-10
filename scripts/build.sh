@@ -5,12 +5,10 @@ set -e
 cd "$(dirname "$0")/.."
 NODE_PATH=$(npm root -g) node scripts/prerender.js
 python3 scripts/build_pages.py
-sed -i 's|<title>Botanical Protocol</title>|<title>Botanical Protocol Tabs</title>|' build/tabs.html
 # Large-text version = tabs version + extra CSS
 python3 - <<'PY'
 s=open('build/tabs.html').read()
 css=open('src/large-text.css').read()
-s=s.replace('<title>Botanical Protocol Tabs</title>','<title>Botanical Protocol Large Text</title>',1)
 s=s.replace('</style>','\n'+css+'\n</style>',1)
 open('build/large.html','w').write(s)
 PY
