@@ -9,7 +9,7 @@ h2 { font-size: 1.45rem; }
 .subtitle { font-size: 1.15rem; }
 .credit, .note, .lim, .compound, .unit, .sub, .cite, .src, .legend, .photos figcaption, .disclaimer, .kgnote, .rlist li, .store ul, section.cautions ul, .before ul, .sublist { font-size: 1rem !important; }
 .ltable, .ltable .sub { font-size: 1rem; }
-.ltable thead th, .ltable tr.grp th, .lbl, .field label, .rlist .topic, .cautions h3, .limits h4 { font-size: 0.9rem !important; letter-spacing: 0.04em; }
+.ltable thead th, .ltable tr.grp th, .lbl, .field label, .rlist .topic, .cautions h3, .limits h4, .lgrp { font-size: 0.9rem !important; letter-spacing: 0.04em; }
 .chip, .tag { font-size: 0.85rem !important; padding: 3px 10px; }
 .cite, a.src { font-weight: 600; }
 /* Navigation: two rows of large buttons instead of a scrolling strip */
@@ -47,6 +47,9 @@ input[type=number], select, button.reset { font-size: 1.1rem; min-height: 52px; 
   .lt3 td:nth-child(2)::before { content: "Suggested"; }
   .lt3 td:nth-child(3)::before { content: "Maximum"; }
   .ltable:not(.lt3) td:nth-child(2)::before { content: "Suggested"; }
+  .ltable.lthow td:nth-child(2)::before { content: "How long"; }
+  .ltable tr.grp { display: block; padding: 16px 0 0; border-bottom: 0; }
+  .ltable tr.grp th { display: block; padding: 0 0 6px; }
   .ltable td:nth-child(n+2)::before { display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
   .rlist li { grid-template-columns: auto minmax(0, 1fr); }
   .rlist .finding { grid-column: 1 / -1; }

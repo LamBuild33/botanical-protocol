@@ -82,6 +82,9 @@ button.reset:hover { border-color: var(--accent); }
 .list { display: grid; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .row { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 12px 24px; padding: 16px; border-top: 1px solid var(--line); }
 .row:first-child { border-top: 0; }
+.lgrp { padding: 16px 0 6px; border-top: 1px solid var(--line); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.lgrp:first-child { border-top: 0; padding-top: 0; }
+.lgrp + .row { border-top: 0; padding-top: 6px; }
 .left { display: grid; gap: 6px; align-content: start; min-width: 0; }
 .name { font-weight: 600; }
 .compound { color: var(--muted); font-size: 0.85rem; }
@@ -144,7 +147,7 @@ button.reset:hover { border-color: var(--accent); }
 .ltable { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
 .ltable th, .ltable td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--line); }
 .ltable thead th { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-.ltable tr.grp th { padding-top: 14px; font-size: 0.78rem; color: var(--accent); font-weight: 600; border-bottom: 1px solid var(--accent-soft); }
+.ltable tr.grp th { padding-top: 14px; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); font-weight: 600; border-bottom: 1px solid var(--accent-soft); }
 .ltable .sub { font-size: 0.78rem; color: var(--muted); font-weight: 400; }
 .ltable td:first-child { width: 45%; }
 .lt3 td:first-child { width: 38%; }
@@ -223,18 +226,8 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
   <section class="before" id="start" aria-label="Before you start">
     <h2>Before you start</h2>
     <ul>
-      <li><strong>How long to take them:</strong> sage's 2 weeks is an official limit. The other time spans are how long people took them in studies; safety beyond that hasn't been studied.
-        <ul class="sublist">
-          <li><strong>Sage:</strong> 2 weeks at most. <span class="cite">Source 4</span></li>
-          <li><strong>Berberine:</strong> up to 3 months, the length most human trials tested. Talk to a doctor about longer use. It acts like a medicine at this dose (see Cautions). <span class="cite">Sources 7, 143, 144</span></li>
-          <li><strong>Activated charcoal:</strong> an emergency medicine that can also stop medicines from being absorbed. <span class="cite">Sources 19, 20</span></li>
-          <li><strong>S. boulardii:</strong> up to 3 months. Its benefits were shown in shorter courses; a 1-year study found it safe and well tolerated. <span class="cite">Sources 114, 149</span></li>
-          <li><strong>Lactobacillus plantarum:</strong> up to 12 weeks, the length of its cold trial. <span class="cite">Source 122</span></li>
-          <li><strong>Propolis:</strong> up to 12 weeks, the length of the longer trials. Health Canada advises checking with a health care practitioner after 4 weeks. <span class="cite">Sources 132, 146, 148</span></li>
-          <li><strong>Papaya seeds:</strong> up to 8 weeks, the length of the Kenyan trial. <span class="cite">Sources 135, 137</span></li>
-        </ul>
-      </li>
-      <li><strong>Skip it if you take blood thinners or any medicine,</strong> unless a pharmacist or doctor says it's OK. Turmeric, ginger, and garlic each thin the blood a little, and the effects add up, so mention it before any surgery or dental work. Cranberry juice may also affect the blood thinner warfarin. <span class="cite">Sources 7, 12, 13, 15, 105</span></li>
+      <li><strong>Some items are short-term.</strong> Sage is 2 weeks at most. Others are taken for 8 weeks to 3 months, the lengths studied. See How long to take them, under Amounts. <span class="cite">Source 4</span></li>
+      <li><strong>Skip it if you take blood thinners or any medicine,</strong> unless a pharmacist or doctor says it's OK. Several ingredients thin the blood or change how medicines work (see Cautions). <span class="cite">Sources 7, 12, 13, 15, 105</span></li>
       <li><strong>Not for pregnancy, breastfeeding, or children.</strong> <span class="cite">Sources 7, 14</span></li>
     </ul>
   </section>
@@ -261,7 +254,20 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
   </section>
   <section class="limits" aria-label="Your daily amounts">
     <h3>Your daily amounts</h3>
-    <div class="tablewrap"><div id="limits"><!--pre:limits--><h4>Ingredients with a limit</h4><p class="note">Based on the weight above. Maximums assume the strongest spice, so they stay safe whatever the strength of your jar, and are rounded down to real spoon sizes. The suggested amount never goes above the maximum.</p><table class="ltable lt3"><thead><tr><th>Ingredient</th><th>Suggested daily amount</th><th>Daily maximum</th></tr></thead><tbody><tr><td>Turmeric <span class="cite">1, 2, 31</span></td><td><strong>1 tsp</strong></td><td><strong>1¼ tsp</strong><div class="sub">changes with your weight; black pepper boosts absorption, so this limit may need to be lower when they're combined</div></td></tr><tr><td>Clove <span class="cite">3, 25</span></td><td><strong>¼ tsp</strong></td><td><strong>½ tsp</strong><div class="sub">changes with your weight</div></td></tr><tr><td>Sage <span class="tag">Short-term</span> <span class="cite">4, 5</span></td><td><strong>⅛ tsp</strong></td><td><strong>¼ tsp</strong><div class="sub">2 weeks at most</div></td></tr></tbody></table><h4>Ingredients without an official limit</h4><p class="note">No official limit exists for these, so these are reasonable amounts, not limits. Times like “Up to 3 months” show how long studies lasted. They're not safety limits.</p><table class="ltable"><thead><tr><th>Ingredient</th><th>Suggested daily amount</th></tr></thead><tbody><tr><td>Black pepper <span class="cite">6</span></td><td><strong>½ tsp</strong><div class="sub">normal food amount; boosts turmeric absorption</div></td></tr><tr><td>Cayenne <span class="cite">10, 30</span></td><td><strong>⅛–¼ tsp</strong><div class="sub">start with ⅛ tsp; burning or heartburn can start around ¼ tsp in sensitive people</div></td></tr><tr><td>Ginger <span class="cite">29</span></td><td><strong>½ tsp</strong><div class="sub">about 1 g, well tolerated in studies; heartburn became more common around 2 g a day</div></td></tr><tr><td>Black seed oil <span class="cite">8, 28</span></td><td><strong>1 tsp</strong><div class="sub">about 5 mL; the amount used in an 8-week trial</div></td></tr><tr><td>Oregano oil <span class="cite">9, 96</span></td><td><strong>Follow the label</strong><div class="sub">strength varies by brand; some also contain black seed oil and ginger, which add to the drink's amounts</div></td></tr><tr><td>Activated charcoal <span class="tag">Short-term</span> <span class="cite">19, 20</span></td><td><strong>Follow the label</strong><div class="sub">at bedtime, 2 hours from other doses</div></td></tr><tr><td>Garlic <span class="cite">12</span></td><td><strong>1 clove</strong><div class="sub">food amount</div></td></tr><tr><td>Olive or coconut oil <span class="cite">17</span></td><td><strong>1 tbsp</strong><div class="sub">food amount</div></td></tr><tr><td>Sunflower lecithin <span class="cite">27</span></td><td><strong>1 tbsp</strong><div class="sub">food amount</div></td></tr><tr><td>Thyme <span class="cite">26, 107, 109</span></td><td><strong>¾ tsp</strong><div class="sub">about 1 g; well below the European Medicines Agency's thyme tea amount (1–2 g, 3–4 times a day)</div></td></tr><tr><td>Berberine <span class="tag">Up to 3 months</span> <span class="cite">7, 97, 143, 144</span></td><td><strong>1,000 mg</strong><div class="sub">two 500 mg capsules at once, after the drink; within the 900–1,500 mg a day used in most trials. Acts like a medicine: drug-like effects begin at about 400 mg. No toxicity limit has been set for pure berberine; Europe's food safety agency (2026 draft) said no safe amount can be set yet</div></td></tr><tr><td>Propolis <span class="tag">Up to 12 weeks</span> <span class="cite">132, 145, 146, 147, 148</span></td><td><strong>1 serving</strong><div class="sub">follow the label (the product used here: 2 mL with 1,220 mg of liquid extract). No toxicity limit set; studies used 400–1,500 mg a day of powder or dry extract for 8 to 12 weeks. Check with a health care practitioner after 4 weeks</div></td></tr><tr><td>S. boulardii <span class="tag">Up to 3 months</span> <span class="cite">114, 119, 149</span></td><td><strong>500 mg</strong><div class="sub">10 billion CFU, with lunch. Its benefits were shown in shorter courses; a 1-year study found it safe and well tolerated. No toxicity limit set; Health Canada allows labels up to 30 billion CFU (about 1,500 mg) for diarrhea from antibiotics</div></td></tr><tr><td>Lactobacillus plantarum <span class="tag">Up to 12 weeks</span> <span class="cite">122, 124</span></td><td><strong>Follow the label</strong><div class="sub">with lunch, for up to 12 weeks, the length of its cold trial; studies used 1–10 billion CFU a day. Results depend on the strain, so look for a named one, such as 299v</div></td></tr><tr><td>Pumpkin seeds <span class="cite">140</span></td><td><strong>Up to 20 g</strong><div class="sub">about 2½ tbsp shelled seeds, with lunch; the European Medicines Agency's daily amount for pumpkin seed</div></td></tr><tr><td>Cranberry juice <span class="cite">98, 99</span></td><td><strong>1 cup (8 oz)</strong><div class="sub">pure cranberry juice, no added sugar, no blends, in the afternoon; the FDA's amount for urinary tract infections</div></td></tr><tr><td>Papaya seeds <span class="tag">Up to 8 weeks</span> <span class="cite">135</span></td><td><strong>10 g ground dried</strong><div class="sub">about 4 tsp (an estimate; weigh if you can), or roughly 20–30 g fresh seeds, in the morning, for up to 8 weeks; the daily amount and length of a Kenyan trial</div></td></tr></tbody></table><!--/pre:limits--></div></div>
+    <div class="tablewrap"><div id="limits"><!--pre:limits--><h4>Ingredients with a limit</h4><p class="note">Based on the weight above. Maximums assume the strongest spice, so they stay safe whatever the strength of your jar, and are rounded down to real spoon sizes. The suggested amount never goes above the maximum.</p><table class="ltable lt3"><thead><tr><th>Ingredient</th><th>Suggested daily amount</th><th>Daily maximum</th></tr></thead><tbody><tr class="grp"><th colspan="3">In the cup</th></tr><tr><td>Turmeric <span class="cite">1, 2, 31</span></td><td><strong>1 tsp</strong></td><td><strong>1¼ tsp</strong><div class="sub">changes with your weight; black pepper boosts absorption, so this limit may need to be lower when they're combined</div></td></tr><tr><td>Clove <span class="cite">3, 25</span></td><td><strong>¼ tsp</strong></td><td><strong>½ tsp</strong><div class="sub">changes with your weight</div></td></tr><tr><td>Sage <span class="tag">Short-term</span> <span class="cite">4, 5</span></td><td><strong>⅛ tsp</strong></td><td><strong>¼ tsp</strong><div class="sub">2 weeks at most</div></td></tr></tbody></table><h4>Ingredients without an official limit</h4><p class="note">No official limit exists for these, so these are reasonable amounts, not limits. Times like “Up to 3 months” show how long studies lasted. They're not safety limits.</p><table class="ltable"><thead><tr><th>Ingredient</th><th>Suggested daily amount</th></tr></thead><tbody><tr class="grp"><th colspan="2">In the cup</th></tr><tr><td>Black pepper <span class="cite">6</span></td><td><strong>½ tsp</strong><div class="sub">normal food amount; boosts turmeric absorption</div></td></tr><tr><td>Cayenne <span class="cite">10, 30</span></td><td><strong>⅛–¼ tsp</strong><div class="sub">start with ⅛ tsp; burning or heartburn can start around ¼ tsp in sensitive people</div></td></tr><tr><td>Ginger <span class="cite">29</span></td><td><strong>½ tsp</strong><div class="sub">about 1 g, well tolerated in studies; heartburn became more common around 2 g a day</div></td></tr><tr><td>Thyme <span class="cite">26, 107, 109</span></td><td><strong>¾ tsp</strong><div class="sub">about 1 g; well below the European Medicines Agency's thyme tea amount (1–2 g, 3–4 times a day)</div></td></tr><tr><td>Sunflower lecithin <span class="cite">27</span></td><td><strong>1 tbsp</strong><div class="sub">food amount</div></td></tr><tr><td>Olive or coconut oil <span class="cite">17</span></td><td><strong>1 tbsp</strong><div class="sub">food amount</div></td></tr><tr><td>Black seed oil <span class="cite">8, 28</span></td><td><strong>1 tsp</strong><div class="sub">about 5 mL; the amount used in an 8-week trial</div></td></tr><tr><td>Garlic <span class="cite">12</span></td><td><strong>1 clove</strong><div class="sub">food amount</div></td></tr><tr class="grp"><th colspan="2">Right after the drink</th></tr><tr><td>Berberine <span class="tag">Up to 3 months</span> <span class="cite">7, 97, 143, 144</span></td><td><strong>1,000 mg</strong><div class="sub">two 500 mg capsules at once; within the 900–1,500 mg a day used in most trials. Acts like a medicine: drug-like effects begin at about 400 mg. No toxicity limit has been set for pure berberine; Europe's food safety agency (2026 draft) said no safe amount can be set yet</div></td></tr><tr><td>Oregano oil <span class="cite">9, 96</span></td><td><strong>Follow the label</strong><div class="sub">strength varies by brand; some also contain black seed oil and ginger, which add to the drink's amounts</div></td></tr><tr><td>Propolis <span class="tag">Up to 12 weeks</span> <span class="cite">132, 145, 146, 147, 148</span></td><td><strong>1 serving</strong><div class="sub">follow the label (the product used here: 2 mL with 1,220 mg of liquid extract). No toxicity limit set; studies used 400–1,500 mg a day of powder or dry extract for 8 to 12 weeks. Check with a health care practitioner after 4 weeks</div></td></tr><tr><td>Papaya seeds <span class="tag">Up to 8 weeks</span> <span class="cite">135</span></td><td><strong>10 g ground dried</strong><div class="sub">about 4 tsp (an estimate; weigh if you can), or roughly 20–30 g fresh seeds, for up to 8 weeks; the daily amount and length of a Kenyan trial</div></td></tr><tr class="grp"><th colspan="2">With lunch</th></tr><tr><td>S. boulardii <span class="tag">Up to 3 months</span> <span class="cite">114, 119, 149</span></td><td><strong>500 mg</strong><div class="sub">10 billion CFU. Its benefits were shown in shorter courses; a 1-year study found it safe and well tolerated. No toxicity limit set; Health Canada allows labels up to 30 billion CFU (about 1,500 mg) for diarrhea from antibiotics</div></td></tr><tr><td>Lactobacillus plantarum <span class="tag">Up to 12 weeks</span> <span class="cite">122, 124</span></td><td><strong>Follow the label</strong><div class="sub">for up to 12 weeks, the length of its cold trial; studies used 1–10 billion CFU a day. Results depend on the strain, so look for a named one, such as 299v</div></td></tr><tr><td>Pumpkin seeds <span class="cite">140</span></td><td><strong>Up to 20 g</strong><div class="sub">about 2½ tbsp shelled seeds; the European Medicines Agency's daily amount for pumpkin seed</div></td></tr><tr class="grp"><th colspan="2">Mid-afternoon</th></tr><tr><td>Cranberry juice <span class="cite">98, 99</span></td><td><strong>1 cup (8 oz)</strong><div class="sub">pure cranberry juice, no added sugar, no blends; the FDA's amount for urinary tract infections</div></td></tr><tr class="grp"><th colspan="2">At bedtime</th></tr><tr><td>Activated charcoal <span class="tag">Short-term</span> <span class="cite">19, 20</span></td><td><strong>Follow the label</strong><div class="sub">at least 2 hours from other doses</div></td></tr></tbody></table><!--/pre:limits--></div></div>
+  </section>
+  <section class="limits" id="howlong" aria-label="How long to take them">
+    <h3>How long to take them</h3>
+    <p class="note">Sage's 2 weeks is an official limit. The other time spans are how long people took them in studies; safety beyond that hasn't been studied.</p>
+    <div class="tablewrap"><table class="ltable lthow"><thead><tr><th>Ingredient</th><th>How long</th></tr></thead><tbody>
+      <tr><td>Sage <span class="cite">4</span></td><td><strong>2 weeks at most</strong><div class="sub">an official limit</div></td></tr>
+      <tr><td>Berberine <span class="cite">7, 143, 144</span></td><td><strong>Up to 3 months</strong><div class="sub">the length most human trials tested. Talk to a doctor about longer use. It acts like a medicine at this dose (see Cautions).</div></td></tr>
+      <tr><td>Propolis <span class="cite">132, 146, 148</span></td><td><strong>Up to 12 weeks</strong><div class="sub">the length of the longer trials. Health Canada advises checking with a health care practitioner after 4 weeks.</div></td></tr>
+      <tr><td>Papaya seeds <span class="cite">135, 137</span></td><td><strong>Up to 8 weeks</strong><div class="sub">the length of the Kenyan trial</div></td></tr>
+      <tr><td>S. boulardii <span class="cite">114, 149</span></td><td><strong>Up to 3 months</strong><div class="sub">its benefits were shown in shorter courses; a 1-year study found it safe and well tolerated</div></td></tr>
+      <tr><td>Lactobacillus plantarum <span class="cite">122</span></td><td><strong>Up to 12 weeks</strong><div class="sub">the length of its cold trial</div></td></tr>
+      <tr><td>Activated charcoal <span class="cite">19, 20</span></td><td><strong>Short-term</strong><div class="sub">an emergency medicine that can also stop medicines from being absorbed</div></td></tr>
+    </tbody></table></div>
   </section>
   </section>
   </div>
@@ -647,7 +653,7 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
     <summary>Check specific amounts</summary>
     <p class="note" style="margin-bottom:10px">Change any amount to see how it compares with its limit, with notes and sources for each ingredient.</p>
     <div class="summary" id="summary" style="margin-bottom:10px"><!--pre:summary--><span class="chip ok">4 within limit</span><span class="chip none">12 with no official limit</span><!--/pre:summary--></div>
-  <section class="list" id="list" aria-label="Ingredients"><!--pre:list--><div class="row">
+  <section class="list" id="list" aria-label="Ingredients"><!--pre:list--><div class="lgrp">In the cup</div><div class="row">
       <div class="left">
         <div class="name">Turmeric powder</div>
         <div class="compound">Checked as: Curcumin</div>
@@ -774,6 +780,36 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         <p class="note">Eating the powder takes in all of its oil, unlike thyme tea. Skip it if you're allergic to the mint family (oregano, sage, basil, lavender).</p>
         <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 26, 107, 108</a></div></div><div class="row">
       <div class="left">
+        <div class="name">Sunflower lecithin (granules or powder)</div>
+        <div class="compound">Checked as: Food ingredient</div>
+        <div class="inrow">
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Sunflower lecithin (granules or powder) amount in tbsp">−</button><input id="in-lecithin" type="number" min="0" step="0.5" value="1" aria-label="Sunflower lecithin (granules or powder) amount in tbsp"><button type="button" class="stepbtn" aria-label="Increase Sunflower lecithin (granules or powder) amount in tbsp">+</button></span>
+          <span class="unit">tbsp / day</span>
+        </div>
+        
+      </div>
+      <div class="right" id="out-lecithin" aria-live="polite">
+        <div class="verdict"><span class="chip food">Food amount</span><span class="est">1.0 tbsp</span></div>
+        <div class="lim">FDA lists lecithin as generally recognized as safe (GRAS) in food.</div>
+        
+        
+        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 27</a></div></div><div class="row">
+      <div class="left">
+        <div class="name">Oil</div>
+        <div class="compound">Checked as: Food fat</div>
+        <div class="inrow">
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Oil amount in tbsp">−</button><input id="in-coconut" type="number" min="0" step="0.5" value="1" aria-label="Oil amount in tbsp"><button type="button" class="stepbtn" aria-label="Increase Oil amount in tbsp">+</button></span>
+          <span class="unit">tbsp / day</span>
+        </div>
+        <div class="inrow"><select id="oiltype" aria-label="Type of oil"><option value="olive" selected="">Olive oil, unrefined extra virgin</option><option value="coconut">Coconut oil, unrefined extra virgin</option></select></div>
+      </div>
+      <div class="right" id="out-coconut" aria-live="polite">
+        <div class="verdict"><span class="chip food">Food amount</span><span class="est">1.0 tbsp olive oil</span></div>
+        <div class="lim">Normal food amount.</div>
+        
+        <p class="note">Mostly unsaturated fat, with about 1 g of saturated fat per tbsp. It helps turmeric absorb just as well.</p>
+        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 16, 17</a></div></div><div class="row">
+      <div class="left">
         <div class="name">Black seed oil</div>
         <div class="compound">Checked as: Whole oil</div>
         <div class="inrow">
@@ -788,6 +824,21 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         
         <p class="note">A 12-week rat study found lower platelet counts (platelets help blood clot).</p>
         <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 8</a></div></div><div class="row">
+      <div class="left">
+        <div class="name">Garlic</div>
+        <div class="compound">Checked as: Fresh clove</div>
+        <div class="inrow">
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Garlic amount in cloves">−</button><input id="in-garlic" type="number" min="0" step="1" value="1" aria-label="Garlic amount in cloves"><button type="button" class="stepbtn" aria-label="Increase Garlic amount in cloves">+</button></span>
+          <span class="unit">cloves / day</span>
+        </div>
+        
+      </div>
+      <div class="right" id="out-garlic" aria-live="polite">
+        <div class="verdict"><span class="chip food">Food amount</span><span class="est">1.0 clove</span></div>
+        <div class="lim">No limit set for food garlic.</div>
+        
+        <p class="note">Garlic supplements may increase bleeding risk.</p>
+        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 12</a></div></div><div class="lgrp">Right after the drink</div><div class="row">
       <div class="left">
         <div class="name">Berberine <span class="tag">Up to 3 months</span></div>
         <div class="compound">Checked as: Berberine</div>
@@ -834,55 +885,25 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         <p class="note">Propolis lowered blood sugar in diabetes trials, which adds to berberine and black seed oil. Skip it if you're allergic to bees, bee products, poplar, or Peru balsam.</p>
         <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 132, 133, 145, 147</a></div></div><div class="row">
       <div class="left">
-        <div class="name">Garlic</div>
-        <div class="compound">Checked as: Fresh clove</div>
+        <div class="name">Papaya seeds, ground dried <span class="tag">Up to 8 weeks</span></div>
+        <div class="compound">Checked as: Seeds</div>
         <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Garlic amount in cloves">−</button><input id="in-garlic" type="number" min="0" step="1" value="1" aria-label="Garlic amount in cloves"><button type="button" class="stepbtn" aria-label="Increase Garlic amount in cloves">+</button></span>
-          <span class="unit">cloves / day</span>
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Papaya seeds, ground dried amount in g">−</button><input id="in-papaya" type="number" min="0" step="1" value="10" aria-label="Papaya seeds, ground dried amount in g"><button type="button" class="stepbtn" aria-label="Increase Papaya seeds, ground dried amount in g">+</button></span>
+          <span class="unit">g / day</span>
         </div>
         
       </div>
-      <div class="right" id="out-garlic" aria-live="polite">
-        <div class="verdict"><span class="chip food">Food amount</span><span class="est">1.0 clove</span></div>
-        <div class="lim">No limit set for food garlic.</div>
+      <div class="right" id="out-papaya" aria-live="polite">
+        <div class="verdict"><span class="chip none">No official limit</span><span class="est">10 g dried seeds (about 4 tsp, an estimate)</span></div>
+        <div class="lim">No official limit. A Kenyan trial used 10 g a day for about 8 weeks, the longest it has been tested. Fresh seeds: roughly 20–30 g (an estimate).</div>
         
-        <p class="note">Garlic supplements may increase bleeding risk.</p>
-        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 12</a></div></div><div class="row">
+        <p class="note">Take it in the morning, away from the probiotics. Not in pregnancy. Men trying to conceive should skip it; in animals, daily seed extract stopped sperm production after about 2 to 3 months.</p>
+        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 135, 137, 138</a></div></div><div class="lgrp">With lunch</div><div class="row">
       <div class="left">
-        <div class="name">Oil</div>
-        <div class="compound">Checked as: Food fat</div>
-        <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Oil amount in tbsp">−</button><input id="in-coconut" type="number" min="0" step="0.5" value="1" aria-label="Oil amount in tbsp"><button type="button" class="stepbtn" aria-label="Increase Oil amount in tbsp">+</button></span>
-          <span class="unit">tbsp / day</span>
-        </div>
-        <div class="inrow"><select id="oiltype" aria-label="Type of oil"><option value="olive" selected="">Olive oil, unrefined extra virgin</option><option value="coconut">Coconut oil, unrefined extra virgin</option></select></div>
-      </div>
-      <div class="right" id="out-coconut" aria-live="polite">
-        <div class="verdict"><span class="chip food">Food amount</span><span class="est">1.0 tbsp olive oil</span></div>
-        <div class="lim">Normal food amount.</div>
-        
-        <p class="note">Mostly unsaturated fat, with about 1 g of saturated fat per tbsp. It helps turmeric absorb just as well.</p>
-        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 16, 17</a></div></div><div class="row">
-      <div class="left">
-        <div class="name">Sunflower lecithin (granules or powder)</div>
-        <div class="compound">Checked as: Food ingredient</div>
-        <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Sunflower lecithin (granules or powder) amount in tbsp">−</button><input id="in-lecithin" type="number" min="0" step="0.5" value="1" aria-label="Sunflower lecithin (granules or powder) amount in tbsp"><button type="button" class="stepbtn" aria-label="Increase Sunflower lecithin (granules or powder) amount in tbsp">+</button></span>
-          <span class="unit">tbsp / day</span>
-        </div>
-        
-      </div>
-      <div class="right" id="out-lecithin" aria-live="polite">
-        <div class="verdict"><span class="chip food">Food amount</span><span class="est">1.0 tbsp</span></div>
-        <div class="lim">FDA lists lecithin as generally recognized as safe (GRAS) in food.</div>
-        
-        
-        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 27</a></div></div><div class="row">
-      <div class="left">
-        <div class="name">S. boulardii (probiotic yeast, with lunch) <span class="tag">Up to 3 months</span></div>
+        <div class="name">S. boulardii (probiotic yeast) <span class="tag">Up to 3 months</span></div>
         <div class="compound">Checked as: Live yeast</div>
         <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease S. boulardii (probiotic yeast, with lunch) amount in mg">−</button><input id="in-sboulardii" type="number" min="0" step="250" value="500" aria-label="S. boulardii (probiotic yeast, with lunch) amount in mg"><button type="button" class="stepbtn" aria-label="Increase S. boulardii (probiotic yeast, with lunch) amount in mg">+</button></span>
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease S. boulardii (probiotic yeast) amount in mg">−</button><input id="in-sboulardii" type="number" min="0" step="250" value="500" aria-label="S. boulardii (probiotic yeast) amount in mg"><button type="button" class="stepbtn" aria-label="Increase S. boulardii (probiotic yeast) amount in mg">+</button></span>
           <span class="unit">mg / day</span>
         </div>
         
@@ -894,10 +915,10 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         <p class="note">Take with lunch, at least 4 hours after the morning drink, and swallow the capsule whole. Benefits were shown in shorter courses; a 1-year study found it safe and well tolerated, so up to 3 months stays within what was studied. Skip it with a weak immune system, a central line, or a serious illness.</p>
         <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 114, 119, 120, 121, 149</a></div></div><div class="row">
       <div class="left">
-        <div class="name">Lactobacillus plantarum (with lunch) <span class="tag">Up to 12 weeks</span></div>
+        <div class="name">Lactobacillus plantarum <span class="tag">Up to 12 weeks</span></div>
         <div class="compound">Checked as: Live bacteria</div>
         <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Lactobacillus plantarum (with lunch) amount in capsules">−</button><input id="in-plantarum" type="number" min="0" step="1" value="1" aria-label="Lactobacillus plantarum (with lunch) amount in capsules"><button type="button" class="stepbtn" aria-label="Increase Lactobacillus plantarum (with lunch) amount in capsules">+</button></span>
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Lactobacillus plantarum amount in capsules">−</button><input id="in-plantarum" type="number" min="0" step="1" value="1" aria-label="Lactobacillus plantarum amount in capsules"><button type="button" class="stepbtn" aria-label="Increase Lactobacillus plantarum amount in capsules">+</button></span>
           <span class="unit">capsules / day</span>
         </div>
         
@@ -909,10 +930,10 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         <p class="note">Follow the label. Up to 12 weeks, the length of its cold trial. Results depend on the strain, so look for one named on the label, such as 299v. Skip it with a weak immune system, a central line, or a serious illness.</p>
         <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 122, 124, 127</a></div></div><div class="row">
       <div class="left">
-        <div class="name">Pumpkin seeds (with lunch)</div>
+        <div class="name">Pumpkin seeds</div>
         <div class="compound">Checked as: Food</div>
         <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Pumpkin seeds (with lunch) amount in g">−</button><input id="in-pumpkin" type="number" min="0" step="5" value="20" aria-label="Pumpkin seeds (with lunch) amount in g"><button type="button" class="stepbtn" aria-label="Increase Pumpkin seeds (with lunch) amount in g">+</button></span>
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Pumpkin seeds amount in g">−</button><input id="in-pumpkin" type="number" min="0" step="5" value="20" aria-label="Pumpkin seeds amount in g"><button type="button" class="stepbtn" aria-label="Increase Pumpkin seeds amount in g">+</button></span>
           <span class="unit">g / day</span>
         </div>
         
@@ -922,12 +943,12 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         <div class="lim">Food. The European Medicines Agency's daily amount for pumpkin seed is up to 20 g.</div>
         
         <p class="note">Large amounts can cause bloating or loose stools.</p>
-        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 140</a></div></div><div class="row">
+        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 140</a></div></div><div class="lgrp">Mid-afternoon</div><div class="row">
       <div class="left">
-        <div class="name">Cranberry juice, pure (afternoon)</div>
+        <div class="name">Cranberry juice, pure</div>
         <div class="compound">Checked as: Juice</div>
         <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Cranberry juice, pure (afternoon) amount in oz">−</button><input id="in-cranberry" type="number" min="0" step="1" value="8" aria-label="Cranberry juice, pure (afternoon) amount in oz"><button type="button" class="stepbtn" aria-label="Increase Cranberry juice, pure (afternoon) amount in oz">+</button></span>
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Cranberry juice, pure amount in oz">−</button><input id="in-cranberry" type="number" min="0" step="1" value="8" aria-label="Cranberry juice, pure amount in oz"><button type="button" class="stepbtn" aria-label="Increase Cranberry juice, pure amount in oz">+</button></span>
           <span class="unit">oz / day</span>
         </div>
         
@@ -937,27 +958,12 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
         <div class="lim">No official limit. The FDA's amount for urinary tract infections is one 8 oz serving a day.</div>
         
         <p class="note">Pure cranberry juice, no added sugar, no blends. Take it at least 2 hours before the bedtime charcoal. Ask a doctor first if you take warfarin or have had kidney stones.</p>
-        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 98, 105, 106</a></div></div><div class="row">
+        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 98, 105, 106</a></div></div><div class="lgrp">At bedtime</div><div class="row">
       <div class="left">
-        <div class="name">Papaya seeds, ground dried (morning) <span class="tag">Up to 8 weeks</span></div>
-        <div class="compound">Checked as: Seeds</div>
-        <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Papaya seeds, ground dried (morning) amount in g">−</button><input id="in-papaya" type="number" min="0" step="1" value="10" aria-label="Papaya seeds, ground dried (morning) amount in g"><button type="button" class="stepbtn" aria-label="Increase Papaya seeds, ground dried (morning) amount in g">+</button></span>
-          <span class="unit">g / day</span>
-        </div>
-        
-      </div>
-      <div class="right" id="out-papaya" aria-live="polite">
-        <div class="verdict"><span class="chip none">No official limit</span><span class="est">10 g dried seeds (about 4 tsp, an estimate)</span></div>
-        <div class="lim">No official limit. A Kenyan trial used 10 g a day for about 8 weeks, the longest it has been tested. Fresh seeds: roughly 20–30 g (an estimate).</div>
-        
-        <p class="note">Take it in the morning, away from the probiotics. Not in pregnancy. Men trying to conceive should skip it; in animals, daily seed extract stopped sperm production after about 2 to 3 months.</p>
-        <a class="src" href="#sources" onclick="var d=document.getElementById('sources');d.open=true;d.scrollIntoView({behavior:'smooth'});return false;">Source 135, 137, 138</a></div></div><div class="row">
-      <div class="left">
-        <div class="name">Activated charcoal (bedtime) <span class="tag">Short-term only</span></div>
+        <div class="name">Activated charcoal <span class="tag">Short-term only</span></div>
         <div class="compound">Checked as: Separate dose</div>
         <div class="inrow">
-          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Activated charcoal (bedtime) amount in capsules">−</button><input id="in-charcoal" type="number" min="0" step="1" value="2" aria-label="Activated charcoal (bedtime) amount in capsules"><button type="button" class="stepbtn" aria-label="Increase Activated charcoal (bedtime) amount in capsules">+</button></span>
+          <span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Activated charcoal amount in capsules">−</button><input id="in-charcoal" type="number" min="0" step="1" value="2" aria-label="Activated charcoal amount in capsules"><button type="button" class="stepbtn" aria-label="Increase Activated charcoal amount in capsules">+</button></span>
           <span class="unit">capsules / day</span>
         </div>
         <div class="inrow"><span class="stepper"><button type="button" class="stepbtn" aria-label="Decrease Charcoal mg per capsule">−</button><input id="charmg" type="number" min="0" step="5" value="475" aria-label="Charcoal mg per capsule"><button type="button" class="stepbtn" aria-label="Increase Charcoal mg per capsule">+</button></span><span class="unit">mg per capsule (from label)</span></div>
@@ -1156,26 +1162,26 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
 <script>
 (function () {
   const ITEMS = [
-    { id: "turmeric", name: "Turmeric powder", compound: "Curcumin", unit: "tsp", def: 1, step: 0.25, thin: true },
-    { id: "pepper", name: "Black pepper", compound: "Piperine", unit: "tsp", def: 0.5, step: 0.25 },
-    { id: "cayenne", name: "Cayenne pepper", compound: "Capsaicin", unit: "tsp", def: 0.125, step: 0.125 },
-    { id: "ginger", name: "Ginger powder", compound: "Ginger (whole)", unit: "tsp", def: 0.5, step: 0.25, thin: true },
-    { id: "clove", name: "Clove powder", compound: "Eugenol", unit: "tsp", def: 0.25, step: 0.25 },
-    { id: "sage", name: "Sage powder", compound: "Thujone", unit: "tsp", def: 0.125, step: 0.125, short: true },
-    { id: "thyme", name: "Thyme, ground", compound: "Whole herb", unit: "tsp", def: 0.75, step: 0.125 },
-    { id: "blackseed", name: "Black seed oil", compound: "Whole oil", unit: "tsp", def: 1, step: 0.25 },
-    { id: "berberine", name: "Berberine", compound: "Berberine", unit: "mg", def: 1000, step: 100, tag: "Up to 3 months" },
-    { id: "oregano", name: "Oregano oil", compound: "Carvacrol", unit: "softgels", def: 2, step: 1 },
-    { id: "propolis", name: "Propolis liquid extract", compound: "Whole extract", unit: "servings", def: 1, step: 1, tag: "Up to 12 weeks" },
-    { id: "garlic", name: "Garlic", compound: "Fresh clove", unit: "cloves", def: 1, step: 1, thin: true },
-    { id: "coconut", name: "Oil", compound: "Food fat", unit: "tbsp", def: 1, step: 0.5 },
-    { id: "lecithin", name: "Sunflower lecithin (granules or powder)", compound: "Food ingredient", unit: "tbsp", def: 1, step: 0.5 },
-    { id: "sboulardii", name: "S. boulardii (probiotic yeast, with lunch)", compound: "Live yeast", unit: "mg", def: 500, step: 250, tag: "Up to 3 months" },
-    { id: "plantarum", name: "Lactobacillus plantarum (with lunch)", compound: "Live bacteria", unit: "capsules", def: 1, step: 1, tag: "Up to 12 weeks" },
-    { id: "pumpkin", name: "Pumpkin seeds (with lunch)", compound: "Food", unit: "g", def: 20, step: 5 },
-    { id: "cranberry", name: "Cranberry juice, pure (afternoon)", compound: "Juice", unit: "oz", def: 8, step: 1, thin: true },
-    { id: "papaya", name: "Papaya seeds, ground dried (morning)", compound: "Seeds", unit: "g", def: 10, step: 1, tag: "Up to 8 weeks" },
-    { id: "charcoal", name: "Activated charcoal (bedtime)", compound: "Separate dose", unit: "capsules", def: 2, step: 1, short: true }
+    { id: "turmeric", name: "Turmeric powder", compound: "Curcumin", unit: "tsp", def: 1, step: 0.25, thin: true, when: "cup" },
+    { id: "pepper", name: "Black pepper", compound: "Piperine", unit: "tsp", def: 0.5, step: 0.25, when: "cup" },
+    { id: "cayenne", name: "Cayenne pepper", compound: "Capsaicin", unit: "tsp", def: 0.125, step: 0.125, when: "cup" },
+    { id: "ginger", name: "Ginger powder", compound: "Ginger (whole)", unit: "tsp", def: 0.5, step: 0.25, thin: true, when: "cup" },
+    { id: "clove", name: "Clove powder", compound: "Eugenol", unit: "tsp", def: 0.25, step: 0.25, when: "cup" },
+    { id: "sage", name: "Sage powder", compound: "Thujone", unit: "tsp", def: 0.125, step: 0.125, short: true, when: "cup" },
+    { id: "thyme", name: "Thyme, ground", compound: "Whole herb", unit: "tsp", def: 0.75, step: 0.125, when: "cup" },
+    { id: "lecithin", name: "Sunflower lecithin (granules or powder)", compound: "Food ingredient", unit: "tbsp", def: 1, step: 0.5, when: "cup" },
+    { id: "coconut", name: "Oil", compound: "Food fat", unit: "tbsp", def: 1, step: 0.5, when: "cup" },
+    { id: "blackseed", name: "Black seed oil", compound: "Whole oil", unit: "tsp", def: 1, step: 0.25, when: "cup" },
+    { id: "garlic", name: "Garlic", compound: "Fresh clove", unit: "cloves", def: 1, step: 1, thin: true, when: "cup" },
+    { id: "berberine", name: "Berberine", compound: "Berberine", unit: "mg", def: 1000, step: 100, tag: "Up to 3 months", when: "after" },
+    { id: "oregano", name: "Oregano oil", compound: "Carvacrol", unit: "softgels", def: 2, step: 1, when: "after" },
+    { id: "propolis", name: "Propolis liquid extract", compound: "Whole extract", unit: "servings", def: 1, step: 1, tag: "Up to 12 weeks", when: "after" },
+    { id: "papaya", name: "Papaya seeds, ground dried", compound: "Seeds", unit: "g", def: 10, step: 1, tag: "Up to 8 weeks", when: "after" },
+    { id: "sboulardii", name: "S. boulardii (probiotic yeast)", compound: "Live yeast", unit: "mg", def: 500, step: 250, tag: "Up to 3 months", when: "lunch" },
+    { id: "plantarum", name: "Lactobacillus plantarum", compound: "Live bacteria", unit: "capsules", def: 1, step: 1, tag: "Up to 12 weeks", when: "lunch" },
+    { id: "pumpkin", name: "Pumpkin seeds", compound: "Food", unit: "g", def: 20, step: 5, when: "lunch" },
+    { id: "cranberry", name: "Cranberry juice, pure", compound: "Juice", unit: "oz", def: 8, step: 1, thin: true, when: "afternoon" },
+    { id: "charcoal", name: "Activated charcoal", compound: "Separate dose", unit: "capsules", def: 2, step: 1, short: true, when: "bed" }
   ];
 
   const $ = (s) => document.querySelector(s);
@@ -1191,7 +1197,16 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
 
   // Build rows (clears the pre-rendered copy shown when scripts can't run)
   list.innerHTML = "";
+  const WHEN = { cup: "In the cup", after: "Right after the drink", lunch: "With lunch", afternoon: "Mid-afternoon", bed: "At bedtime" };
+  let lastWhen = null;
   ITEMS.forEach((it) => {
+    if (it.when !== lastWhen) {
+      const h = document.createElement("div");
+      h.className = "lgrp";
+      h.textContent = WHEN[it.when];
+      list.appendChild(h);
+      lastWhen = it.when;
+    }
     const row = document.createElement("div");
     row.className = "row";
     const extra = it.id === "oregano"
@@ -1400,6 +1415,7 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
   function limitsTable(W) {
     const S = (n) => `<span class="cite">${n}</span>`;
     const row = (name, amt, sub, src) => `<tr><td>${name} ${S(src)}</td><td><strong>${amt}</strong>${sub ? `<div class="sub">${sub}</div>` : ""}</td></tr>`;
+    const grp = (t, n) => `<tr class="grp"><th colspan="${n || 2}">${t}</th></tr>`;
     const table = (head, rows) => `<table class="ltable"><thead><tr><th>Ingredient</th><th>${head}</th></tr></thead><tbody>${rows.join("")}</tbody></table>`;
     const tMax = (3 * W) / (3.0 * 0.05 * 1000), cMax = (2.5 * W) / (2.1 * 0.15 * 1000), sMax = 6 / (0.7 * 0.03 * 0.96 * 1000);
     const def = (id) => ITEMS.find((i) => i.id === id).def;
@@ -1412,25 +1428,30 @@ section[id], div[id="more"] { scroll-margin-top: calc(env(safe-area-inset-top, 0
       row3("Sage <span class='tag'>Short-term</span>", sugT("sage", sMax), floorFrac(sMax) + " tsp", "2 weeks at most", "4, 5"),
     ];
     const sug = [
+      grp("In the cup"),
       row("Black pepper", "\u00bd tsp", "normal food amount; boosts turmeric absorption", "6"),
       row("Cayenne", "\u215b\u2013\u00bc tsp", "start with \u215b tsp; burning or heartburn can start around \u00bc tsp in sensitive people", "10, 30"),
       row("Ginger", "\u00bd tsp", "about 1 g, well tolerated in studies; heartburn became more common around 2 g a day", "29"),
-      row("Black seed oil", "1 tsp", "about 5 mL; the amount used in an 8-week trial", "8, 28"),
-      row("Oregano oil", "Follow the label", "strength varies by brand; some also contain black seed oil and ginger, which add to the drink's amounts", "9, 96"),
-      row("Activated charcoal <span class='tag'>Short-term</span>", "Follow the label", "at bedtime, 2 hours from other doses", "19, 20"),
-      row("Garlic", "1 clove", "food amount", "12"),
-      row("Olive or coconut oil", "1 tbsp", "food amount", "17"),
-      row("Sunflower lecithin", "1 tbsp", "food amount", "27"),
       row("Thyme", "\u00be tsp", "about 1 g; well below the European Medicines Agency's thyme tea amount (1\u20132 g, 3\u20134 times a day)", "26, 107, 109"),
-      row("Berberine <span class='tag'>Up to 3 months</span>", "1,000 mg", "two 500 mg capsules at once, after the drink; within the 900\u20131,500 mg a day used in most trials. Acts like a medicine: drug-like effects begin at about 400 mg. No toxicity limit has been set for pure berberine; Europe's food safety agency (2026 draft) said no safe amount can be set yet", "7, 97, 143, 144"),
+      row("Sunflower lecithin", "1 tbsp", "food amount", "27"),
+      row("Olive or coconut oil", "1 tbsp", "food amount", "17"),
+      row("Black seed oil", "1 tsp", "about 5 mL; the amount used in an 8-week trial", "8, 28"),
+      row("Garlic", "1 clove", "food amount", "12"),
+      grp("Right after the drink"),
+      row("Berberine <span class='tag'>Up to 3 months</span>", "1,000 mg", "two 500 mg capsules at once; within the 900\u20131,500 mg a day used in most trials. Acts like a medicine: drug-like effects begin at about 400 mg. No toxicity limit has been set for pure berberine; Europe's food safety agency (2026 draft) said no safe amount can be set yet", "7, 97, 143, 144"),
+      row("Oregano oil", "Follow the label", "strength varies by brand; some also contain black seed oil and ginger, which add to the drink's amounts", "9, 96"),
       row("Propolis <span class='tag'>Up to 12 weeks</span>", "1 serving", "follow the label (the product used here: 2 mL with 1,220 mg of liquid extract). No toxicity limit set; studies used 400\u20131,500 mg a day of powder or dry extract for 8 to 12 weeks. Check with a health care practitioner after 4 weeks", "132, 145, 146, 147, 148"),
-      row("S. boulardii <span class='tag'>Up to 3 months</span>", def("sboulardii") + " mg", "10 billion CFU, with lunch. Its benefits were shown in shorter courses; a 1-year study found it safe and well tolerated. No toxicity limit set; Health Canada allows labels up to 30 billion CFU (about 1,500 mg) for diarrhea from antibiotics", "114, 119, 149"),
-      row("Lactobacillus plantarum <span class='tag'>Up to 12 weeks</span>", "Follow the label", "with lunch, for up to 12 weeks, the length of its cold trial; studies used 1\u201310 billion CFU a day. Results depend on the strain, so look for a named one, such as 299v", "122, 124"),
-      row("Pumpkin seeds", "Up to 20 g", "about 2\u00bd tbsp shelled seeds, with lunch; the European Medicines Agency's daily amount for pumpkin seed", "140"),
-      row("Cranberry juice", "1 cup (8 oz)", "pure cranberry juice, no added sugar, no blends, in the afternoon; the FDA's amount for urinary tract infections", "98, 99"),
-      row("Papaya seeds <span class='tag'>Up to 8 weeks</span>", "10 g ground dried", "about 4 tsp (an estimate; weigh if you can), or roughly 20\u201330 g fresh seeds, in the morning, for up to 8 weeks; the daily amount and length of a Kenyan trial", "135"),
+      row("Papaya seeds <span class='tag'>Up to 8 weeks</span>", "10 g ground dried", "about 4 tsp (an estimate; weigh if you can), or roughly 20\u201330 g fresh seeds, for up to 8 weeks; the daily amount and length of a Kenyan trial", "135"),
+      grp("With lunch"),
+      row("S. boulardii <span class='tag'>Up to 3 months</span>", def("sboulardii") + " mg", "10 billion CFU. Its benefits were shown in shorter courses; a 1-year study found it safe and well tolerated. No toxicity limit set; Health Canada allows labels up to 30 billion CFU (about 1,500 mg) for diarrhea from antibiotics", "114, 119, 149"),
+      row("Lactobacillus plantarum <span class='tag'>Up to 12 weeks</span>", "Follow the label", "for up to 12 weeks, the length of its cold trial; studies used 1\u201310 billion CFU a day. Results depend on the strain, so look for a named one, such as 299v", "122, 124"),
+      row("Pumpkin seeds", "Up to 20 g", "about 2\u00bd tbsp shelled seeds; the European Medicines Agency's daily amount for pumpkin seed", "140"),
+      grp("Mid-afternoon"),
+      row("Cranberry juice", "1 cup (8 oz)", "pure cranberry juice, no added sugar, no blends; the FDA's amount for urinary tract infections", "98, 99"),
+      grp("At bedtime"),
+      row("Activated charcoal <span class='tag'>Short-term</span>", "Follow the label", "at least 2 hours from other doses", "19, 20")
     ];
-    return `<h4>Ingredients with a limit</h4><p class="note">Based on the weight above. Maximums assume the strongest spice, so they stay safe whatever the strength of your jar, and are rounded down to real spoon sizes. The suggested amount never goes above the maximum.</p><table class="ltable lt3"><thead><tr><th>Ingredient</th><th>Suggested daily amount</th><th>Daily maximum</th></tr></thead><tbody>${max.join("")}</tbody></table><h4>Ingredients without an official limit</h4><p class="note">No official limit exists for these, so these are reasonable amounts, not limits. Times like \u201cUp to 3 months\u201d show how long studies lasted. They're not safety limits.</p>${table("Suggested daily amount", sug)}`;
+    return `<h4>Ingredients with a limit</h4><p class="note">Based on the weight above. Maximums assume the strongest spice, so they stay safe whatever the strength of your jar, and are rounded down to real spoon sizes. The suggested amount never goes above the maximum.</p><table class="ltable lt3"><thead><tr><th>Ingredient</th><th>Suggested daily amount</th><th>Daily maximum</th></tr></thead><tbody>${grp("In the cup", 3)}${max.join("")}</tbody></table><h4>Ingredients without an official limit</h4><p class="note">No official limit exists for these, so these are reasonable amounts, not limits. Times like \u201cUp to 3 months\u201d show how long studies lasted. They're not safety limits.</p>${table("Suggested daily amount", sug)}`;
   }
 
   function servingList(W) {
