@@ -2,7 +2,7 @@
 
 By Alfred Ceballos
 
-A weight-based guide to a daily herbal and spice protocol. Enter your body weight and the page shows suggested daily amounts, the maximum for each ingredient that has an official safety limit, a shopping list, how to make it, cautions, and the research behind each ingredient (150 sources).
+A weight-based guide to a daily herbal and spice protocol. Enter your body weight and the page shows suggested daily amounts, the maximum for each ingredient that has an official safety limit, a shopping list, how to make it, cautions, and the research behind each ingredient (151 sources).
 
 This is general information, not medical advice. Read "Before you start" on the page first.
 
